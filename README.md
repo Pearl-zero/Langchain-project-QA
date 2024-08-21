@@ -3,17 +3,17 @@
 - RAG 기반 LLM 모델 활용한 의료법 및 판례 QA 엔진
 <br>
 
-## 프로젝트 소개
-**1. 배경**
+## 0. 프로젝트 소개
+**1) 배경**
   + 의료법과 관련된 정보는 **전문적인 지식이 요구**되고, 일반인에게는 **이해하기 어려운 경우**가 많음
   + 의료법에 대한 지식이 부족한 일반인들이 **법적 권리와 의무를 이해하는데 어려움**을 겪고 있음
 
-**2. 목적**
+**2) 목적**
   + 의료법과 판례에 대한 **정보를 쉽고 빠르게 찾아볼 수 있도록 지원**하기 위함
   + 신뢰할 수 있는 의료 정보를 제공하여 잘못된 정보로 인한 **피해를 예방**하기 위함
   + 전문가와의 상담을 위한 **사전 정보를 제공**하고 **효율적인 소통**을 위함
 
-**3. Architecture**
+**3) Architecture**
 
 <img src="https://github.com/user-attachments/assets/9a69738c-0771-40e3-86c2-d327c71b327f" width="500" height="166" />
 <br>
@@ -181,23 +181,22 @@
 ├── chat_model.py
 ├── ui_components.py
 └── main.py
-
 ```
 
 <br>
 
 ## 4. 개발 기간 및 작업 관리
 
-### 개발 기간
-- 전체 개발 기간 : 2024-08-13 ~ 2024-08-18
-- 기능 구현 : 2024-08-15 ~ 2024-08-18
+#### 개발 기간
+- 전체 개발 기간 : 2024-08-12 ~ 2024-08-19
+- 기능 구현 : 2024-08-16 ~ 2024-08-19
 - 그외 기간 작성
   
 <br>
 
-### 작업 관리
+#### 작업 관리
 
-- chromadb 패키지 오류는 아래와 같이 발생했습니다.
+1) chromadb 패키지 오류는 아래와 같이 발생했습니다.
 
 ```python
 error: subprocess-exited-with-error
@@ -248,21 +247,19 @@ note: This error originates from a subprocess, and is likely not a problem with 
 ...
 ```
 
-### 설명
+##### 설명
 
 - Python 3.12 버전인 경우 위와 같은 에러가 발생된다.
 
 
-### 해결
+##### 해결
 
 - 이를 해결하기 위해서는 2가지 방법이 있다.
   1. Microsoft C++ Build Tools 설치
   2. Python 3.10으로 낮추기
+<br>
 
-
-- - -
-
-- Lnagchain 라이브러리에서 **create_history_aware_retrieval**, **create_retrieval_chain** 모듈 사용시 Import Error 발생, 오류는 아래와 같이 발생했습니다.
+2) Lnagchain 라이브러리에서 **create_history_aware_retrieval**, **create_retrieval_chain** 모듈 사용시 Import Error 발생
 
 ```python
 No Module create_history_aware_retrieval
@@ -271,12 +268,12 @@ No Module create_retrieval_chain
 
 ```
 
-### 설명
+##### 설명
 
 - 버전 업데이트로 모듈 위치가 변경되어 모듈을 불러오지 못했다고 경고창이 뜨고 실행되지 않습니다.
 
 
-### 해결
+##### 해결
 
 - 아래와 같이 import문 변경하면 해결됩니다.
  
